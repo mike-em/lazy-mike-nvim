@@ -68,10 +68,7 @@ keymap("n", "<leader>ut", ":UndotreeToggle<CR>", opts)
 
 -- Comment (problem)
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
---[[ keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', opts) ]]
-keymap("x", "<leader>/", function()
-  require("Comment.api").toggle.linewise(vim.fn.visualmode())
-end, opts)
+keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', opts)
 
 -- Find and replace --
 keymap("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
